@@ -13,6 +13,9 @@ import AddAdmin from "./Component/AddAdmin/AddAdmin";
 import PrivateRoute from "./Component/Login/PrivateRoute";
 import AllService from "./Component/AllService/AllService";
 import AddReview from "./Component/DashBoard/AddReview/AddReview";
+import AddNewService from "./Component/AddNewService/AddNewService";
+import Order from "./Component/Home/Service/ServiceDetail/Order/Order";
+import CheckList from "./Component/CheckList/CheckList";
 export const UserContext = createContext();
 
 function App() {
@@ -25,9 +28,16 @@ function App() {
       <Route exact path ="/">
         <Home></Home>
       </Route>
-      <PrivateRoute path= "/dashBoard/order">
+      <PrivateRoute path= "/dashBoard/payment">
         <DashBoard></DashBoard>
       </PrivateRoute>
+      <PrivateRoute path= "/checkList">
+        <CheckList></CheckList>
+      </PrivateRoute>
+      <PrivateRoute path= "/order/:_id">
+        <Order></Order>
+      </PrivateRoute>
+      
       
       <PrivateRoute path= "/admin">
         <AddAdmin></AddAdmin>
@@ -36,7 +46,9 @@ function App() {
       <PrivateRoute path= "/addReview">
         <AddReview></AddReview>
       </PrivateRoute>
-     
+      <PrivateRoute path= "/addNewService">
+        <AddNewService></AddNewService>
+      </PrivateRoute>
       <PrivateRoute path="/allService">
             <AllService></AllService>
           </PrivateRoute>

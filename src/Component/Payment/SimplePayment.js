@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
 import { useForm } from 'react-hook-form';
 
-const SimplePayment = () => {
+const SimplePayment = ({handlePayment}) => {
     const { register,  watch, formState: { errors } } = useForm();
     const [paymentError, setPaymentError] = useState (null);
     const [paymentSuccess, setPaymentSuccess] = useState (null)
@@ -36,6 +36,7 @@ const SimplePayment = () => {
     } else {
         setPaymentSuccess(paymentMethod.id)
         setPaymentError(null)
+        handlePayment(paymentMethod.id)
     }
   };
     return (

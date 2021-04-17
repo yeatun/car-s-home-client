@@ -28,15 +28,16 @@ const Sidebar = () => {
                     </Link>
                 </li>
                 <li>
-                    <Link to="/dashBoard/order" className="text-white">
+                    <Link to="/dashBoard/payment" className="text-white">
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span> 
                     </Link>
                 </li>
                 <li>
-                    <Link to="/allService" className="text-white">
-                        <FontAwesomeIcon icon={faUsers} /> <span>Booking List</span>
+                    <Link to="/checkList" className="text-white">
+                        <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span> 
                     </Link>
                 </li>
+               
                 <li>
                     <Link to="/addReview" className="text-white">
                         <FontAwesomeIcon icon={faFileAlt} /> <span>Review</span>
@@ -44,8 +45,18 @@ const Sidebar = () => {
                 </li>
                 {isAdmin &&  <div>
                     <li>
+                    <Link to="/allService" className="text-white">
+                        <FontAwesomeIcon icon={faUsers} /> <span>Order List</span>
+                    </Link>
+                </li>
+                    <li>
                     <Link to="/admin" className="text-white">
                         <FontAwesomeIcon icon={faUsers} /> <span>make admin</span>
+                    </Link>
+                    </li>
+                    <li>
+                    <Link to="/addNewService" className="text-white">
+                        <FontAwesomeIcon icon={faUsers} /> <span>Add New Service</span>
                     </Link>
                     </li>
               

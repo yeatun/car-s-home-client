@@ -1,6 +1,5 @@
 import React from 'react';
-import Calnder from '../Calender/Calnder';
-import 'react-calendar/dist/Calendar.css';
+
 import Service from '../Service';
 import { useState } from 'react';
 const Services = () => {
@@ -15,7 +14,7 @@ const Services = () => {
            <h2 text-brand>Quality Servicing Opportunity</h2>
       
            </div>
-               <Calnder handleDateChange={handleDateChange} ></Calnder>
+           
                <Service date={selectedDate}></Service>
         </div>
     );

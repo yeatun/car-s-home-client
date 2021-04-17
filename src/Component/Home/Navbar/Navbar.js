@@ -1,9 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 
 const Navbar = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    fetch('http://localhost:5000/isAdmin', {
+        method: 'POST',
+        headers: { 'content-type': 'application/json' },
+        body: JSON.stringify({ email: loggedInUser.email })
+    })
+        .then(res => res.json())
+        .then(data => setIsAdmin(data));
+}, [])
     return (
       
         <div>
@@ -26,11 +36,19 @@ const Navbar = () => {
           <a class="nav-link ms-5 active text-brand" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link ms-5 text-brand" href="#">About</a>
+          <Link class="nav-link ms-5 text-brand " to="/checkList">Booking List</Link>
         </li>
         <li class="nav-item">
-        <Link className="nav-link ms-5 text-brand" to="/dashBoard/order">Dashboard</Link>
+          <Link class="nav-link ms-5 text-brand " to="/addReview">Review</Link>
         </li>
+        {isAdmin &&    <div>
+       <li class="nav-item">
+          <Link class="nav-link ms-5 text-brand " to="/admin">admin</Link>
+        </li>
+       </div>}
+        {/* <li class="nav-item">
+        <Link className="nav-link ms-5 text-brand" to="/dashBoard/order">Dashboard</Link>
+        </li> */}
         {/* <li class="nav-item">
         <Link class="nav-link ms-5 text-brand " to="/admin">admin</Link>
         </li> */}

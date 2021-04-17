@@ -45,14 +45,7 @@ const AddAdmin = () => {
                         <label htmlFor="exampleInputEmail1">Email address</label>
                         <input onBlur={handleBlur} type="email" className="form-control" name="email" placeholder="Enter email" />
                     </div>
-                    {/* <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Name</label>
-                        <input onBlur={handleBlur}  type="text" className="form-control" name="name" placeholder="Name" />
-                    </div>
-                    <div className="form-group">
-                        <label htmlFor="exampleInputPassword1">Upload a image</label>
-                        <input onChange={handleFileChange}  type="file" className="form-control" id="exampleInputPassword1" placeholder="Picture" />
-                    </div> */}
+                  
                     <button type="submit" className="btn btn-primary">Submit</button>
                 </form>
             </div>

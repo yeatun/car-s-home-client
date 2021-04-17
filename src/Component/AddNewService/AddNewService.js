@@ -1,20 +1,20 @@
 import axios from 'axios';
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
-import Sidebar from '../Sidebar/Sidebar';
-const AddReview = () => {
+import Sidebar from '../DashBoard/Sidebar/Sidebar';
+
+const AddNewService = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const [imageURL, setIMageURL] = useState(null);
   const onSubmit = data => {
       console.log(data)
       const eventData = {
         name: data.name,
-        email:data.email,
-        place:data.place,
+       
         review:data.review,
         imageURL: imageURL
       };
-      const url = `http://localhost:5000/addReview`;
+      const url = `http://localhost:5000/addNewService`;
     
       fetch(url, {
         method: 'POST', 
@@ -23,8 +23,7 @@ const AddReview = () => {
         },
         body: JSON.stringify(eventData)
       })
-      .then(res => console.log('server side response', res)
-      )
+      .then(res => console.log('server side response', res))
     };
   const handleImageUpload= event =>{
     console.log(event.target.files[0])
@@ -48,13 +47,20 @@ const AddReview = () => {
         <Sidebar></Sidebar>
         </div>
          <div className="col-md-8" >
-             <h2 className='p-5'>We want to know your feed back</h2>
-         
+             <h2 className='p-5'>Add new service</h2>
+             {/* <form onSubmit={handleSubmit(onSubmit)}>
+    
+      <input name="name" defaultValue="New exciting Event" ref={register} />
+      <br/>
+      <input name="exampleRequired" type="file" onChange={handleImageUpload} />
+      <br/>
+      <input type="submit" />
+    </form> */}
          <form  onSubmit={handleSubmit(onSubmit)}>
                     <div className="form-group">
-                        <label htmlFor="exampleInputEmail1">from</label>
+                        <label htmlFor="exampleInputEmail1">Email address</label>
                         <br/>
-                        <input name="from" type="text" {...register("from")}  placeholder='from' className="form-control" />
+                        <input name="email" type="text" {...register("email")}  placeholder='email' className="form-control" />
                     </div>
                     <div className="form-group">
                         <label htmlFor="exampleInputPassword1">Name</label>
@@ -78,4 +84,4 @@ const AddReview = () => {
     );
 };
 
-export default AddReview;
+export default AddNewService;

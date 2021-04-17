@@ -5,7 +5,7 @@ import Footer from './Footer/Footer';
 
 import Header from './Header/Header';
 import OurGarez from './OurGarez/OurGarez';
-import Service from './Service/ServiceDetail/Service';
+
 import Services from './Service/ServiceDetail/Services/Services';
 import Testimonial from './Testimonial/Testimonial';
 

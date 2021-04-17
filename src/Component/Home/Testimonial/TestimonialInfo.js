@@ -12,10 +12,11 @@ const TestimonialInfo = ({review}) => {
             <img className="me-3" src={review.imageURL} alt="" width="60"/>
             <div>
                 <h6 className="text-primary">{review.name}</h6>
-                {/* <p className="m-0">{review.place}</p> */}
+    
+            <p className="m-0">{review.place}</p>
             </div>
         </div>
-        <div ><small>{review.quote}</small>
+        <div ><small>{review.review}</small>
          </div>
       </div>
    </div>
