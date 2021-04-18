@@ -14,7 +14,7 @@ const AddNewService = () => {
         review:data.review,
         imageURL: imageURL
       };
-      const url = `http://localhost:5000/addNewService`;
+      const url = `https://limitless-lake-51288.herokuapp.com/addNewService`;
     
       fetch(url, {
         method: 'POST', 

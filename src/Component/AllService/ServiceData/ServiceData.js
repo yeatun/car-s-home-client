@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 const ServiceData = ({services}) => {
     const history = useHistory();
     const handleDelete = (_id) => {
-        fetch(`http://localhost:5000/delete/${_id}`, {
+        fetch(`https://limitless-lake-51288.herokuapp.com/delete/${_id}`, {
             method: 'DELETE'
         })
         .then(res => res.json())

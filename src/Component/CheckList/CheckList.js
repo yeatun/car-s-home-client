@@ -8,12 +8,12 @@ const CheckList = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
      const [checkList, setCheckList] = useState([]);
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/serviceData`)
+    //     fetch(`https://limitless-lake-51288.herokuapp.com/serviceData`)
     //         .then(res => res.json())
     //         .then(data => setCheckList(data))
     // }, [])
     useEffect(() => {
-        fetch(`http://localhost:5000/order?email=${loggedInUser.email}`, {
+        fetch(`https://limitless-lake-51288.herokuapp.com/order?email=${loggedInUser.email}`, {
             method: "GET",
             headers: { 'Content-Type': 'application/json' }
         })

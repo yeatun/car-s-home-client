@@ -16,7 +16,7 @@ const [product ,setProduct] = useState({});
 
 
 useEffect(()=>{
-    fetch(`http://localhost:5000/dashBoard`)
+    fetch(`https://limitless-lake-51288.herokuapp.com/dashBoard`)
     .then(res =>res.json())
     .then(data =>{ setProduct(data)
        

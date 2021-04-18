@@ -18,7 +18,7 @@ const Order = () => {
     const [order ,setOrder] = useState([]);
     console.log(order)
     useEffect(() => {
-        fetch('http://localhost:5000/newService')
+        fetch('https://limitless-lake-51288.herokuapp.com/newService')
         .then(res => res.json())
         .then(data => setOrder(data))
     }, [])
@@ -37,7 +37,7 @@ const Order = () => {
         console.log(orderDetails);
       
         
-        fetch(`http://localhost:5000/addService`, {
+        fetch(`https://limitless-lake-51288.herokuapp.com/addService`, {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(orderDetails)
