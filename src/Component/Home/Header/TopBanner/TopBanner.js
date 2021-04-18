@@ -1,13 +1,25 @@
 import React from 'react';
-import carService from '../../../images/car-1.png'
+import carService from '../../../images/car-1.png';
+import {useSpring, animated} from 'react-spring';
+
+
 const TopBanner = () => {
+   
+    const props = useSpring({
+        to: [{opacity: 10, color: '#ffaaee'}, {opacity: 10, color: 'rgb(14,26,19)'}],
+        from: {opacity: 0.1, color: 'red'}
+      })
+     
+
     return (
+        
       <main>
            <main style={{height:'600px'}} className ="row d-flex align-items-center">
             <div className="col-md-4 offset-md-1">
-                <h1 className='text-brand'><b>Professional Auto</b> <br/><b>Car servicing</b></h1>
+            
+                <h1 className='text-brand'><b>Professional Auto</b> <br/><b>Car servicing </b></h1>
                 <p className ="text-secondary">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur laboriosam, iure tempore itaque libero officiis.</p>
-                <button className ="btn btn-dark text-white">GET BOOKING</button>
+                <button className ="btn btn-success text-white">  <animated.div style={props}><b>lear more</b></animated.div></button>
             </div>
             <div className="col-md-6">
                 <img src={carService} alt="" className ="img-fluid"/>

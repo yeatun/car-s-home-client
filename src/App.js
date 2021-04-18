@@ -8,7 +8,7 @@ import {
 } from "react-router-dom";
 import Home from "./Component/Home/Home";
 import Login from "./Component/Login/Login";
-import DashBoard from "./Component/DashBoard/DashBoard/DashBoard";
+
 import AddAdmin from "./Component/AddAdmin/AddAdmin";
 import PrivateRoute from "./Component/Login/PrivateRoute";
 import AllService from "./Component/AllService/AllService";
@@ -28,9 +28,7 @@ function App() {
       <Route exact path ="/">
         <Home></Home>
       </Route>
-      <PrivateRoute path= "/dashBoard/payment">
-        <DashBoard></DashBoard>
-      </PrivateRoute>
+     
       <PrivateRoute path= "/checkList">
         <CheckList></CheckList>
       </PrivateRoute>

@@ -27,11 +27,11 @@ const Sidebar = () => {
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>home</span> 
                     </Link>
                 </li>
-                <li>
-                    <Link to="/dashBoard/payment" className="text-white">
+                {/* <li>
+                    <Link to="/order/:_id" className="text-white">
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Dashboard</span> 
                     </Link>
-                </li>
+                </li> */}
                 <li>
                     <Link to="/checkList" className="text-white">
                         <FontAwesomeIcon icon={faGripHorizontal} /> <span>Booking List</span> 

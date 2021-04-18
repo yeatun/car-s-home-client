@@ -20,7 +20,10 @@ const ServiceData = ({services}) => {
             <tr>
             <th className="text-secondary text-left" scope="col">Sr No</th>
             <th className="text-secondary" scope="col">Name</th>
+            <th className="text-secondary" scope="col">phone</th>
             <th className="text-secondary" scope="col">email</th>
+            <th className="text-secondary" scope="col">address</th>
+            <th className="text-secondary" scope="col">payment id</th>
             <th className="text-secondary" scope="col">service name</th>
             <th className="text-secondary" scope="col">order</th>
             <th className="text-secondary" scope="col">delete</th>
@@ -35,8 +38,11 @@ const ServiceData = ({services}) => {
                     
                 <tr>
                     <td>{index + 1}</td>
-                    <td>{service.user }</td>
+                    <td>{service.name }</td>
+                    <td>{service.phone }</td>
                     <td>{service.email}</td>
+                    <td>{service.address}</td>
+                    <td>{service.paymentId}</td>
                     <td>{service.service}</td>
                     <td><button className="btn btn-dark">done</button></td>
                     <td><button className="btn btn-danger" onClick={() => handleDelete(service._id)}>Delete</button></td>

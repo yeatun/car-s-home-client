@@ -10,7 +10,7 @@ const AddNewService = () => {
       console.log(data)
       const eventData = {
         name: data.name,
-       
+       price:data.price,
         review:data.review,
         imageURL: imageURL
       };

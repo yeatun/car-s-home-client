@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyC5BKuVP-4XtkJmkteUFuJpW6So58MFEr0",
-    authDomain: "doctors-portal-7e40e.firebaseapp.com",
-    projectId: "doctors-portal-7e40e",
-    storageBucket: "doctors-portal-7e40e.appspot.com",
-    messagingSenderId: "285002182755",
-    appId: "1:285002182755:web:e4abb16bea37d769090856"
-  };
+  apiKey: "AIzaSyBx92FqNUChM-oOVEp2hm1uSru2cFH6-EI",
+  authDomain: "car-service-40270.firebaseapp.com",
+  projectId: "car-service-40270",
+  storageBucket: "car-service-40270.appspot.com",
+  messagingSenderId: "1037928280144",
+  appId: "1:1037928280144:web:103d4f89f595708bc22155"
+};
 
   export default firebaseConfig;
